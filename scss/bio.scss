@@ -1,0 +1,31 @@
+@import './global.scss';
+@import './bg.scss';
+@import './glass.scss';
+@import './dropdown.scss';
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glassContainer{
+    padding:20px;
+    color:white;
+    width: 50vw;
+}
+p{
+    margin:0 0 10px 0;
+}
+
+h1{
+    margin:10px 0;
+}
+
+nav{
+    display: flex;
+    margin:10px;
+    justify-content: space-evenly;
+}

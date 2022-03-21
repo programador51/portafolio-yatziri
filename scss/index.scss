@@ -1,0 +1,77 @@
+@import "./global.scss";
+
+
+* {
+  color: white;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  img {
+    object-fit: fill;
+  }
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+  width: 50vw;
+}
+
+section {
+  display: flex;
+  img{
+    height: 100%;
+    border-radius:0 0 0 10px;
+  }
+  align-items: center;
+  ul {
+    width: 100%;
+  }
+  li {
+    margin: 0 0 10px 0;
+  }
+
+  .my_info {
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px;
+  }
+}
+
+.profile_picture_container{
+  width: 100%;
+}
+
+.personalInfo {
+  background: rgba(60, 97, 115, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  width: 50vw;
+  justify-content: center;
+  grid-template-columns: 100%;
+  grid-template-rows: 10vh 65vh;
+}
+
+@import "./bg.scss";
+@import './dropdown.scss';
