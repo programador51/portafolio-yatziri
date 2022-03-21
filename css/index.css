@@ -26,6 +26,10 @@
   color: white;
 }
 
+.navigate {
+  text-align: center;
+}
+
 * {
   color: white;
 }
@@ -60,19 +64,23 @@ section {
 section img {
   height: 100%;
   border-radius: 0 0 0 10px;
+  max-width: 50%;
+  object-fit: cover;
 }
 
 section ul {
   width: 100%;
+  margin: 0 10px;
+  box-sizing: border-box;
 }
 
 section li {
   margin: 0 0 10px 0;
+  list-style: square inside;
 }
 
 section .my_info {
   width: 100%;
-  margin: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;

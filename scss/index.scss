@@ -31,18 +31,22 @@ section {
   img{
     height: 100%;
     border-radius:0 0 0 10px;
+    max-width: 50%;
+    object-fit: cover;
   }
   align-items: center;
   ul {
     width: 100%;
+    margin:0 10px;
+    box-sizing: border-box;
   }
   li {
     margin: 0 0 10px 0;
+    list-style: square inside;
   }
 
   .my_info {
     width: 100%;
-    margin: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
