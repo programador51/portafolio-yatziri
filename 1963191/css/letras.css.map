@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,gBAAgB;EAC7B,GAAG,EAAE,qCAAqC",
-    "sources": [
-        "../scss/letras.scss"
-    ],
-    "names": [],
-    "file": "letras.css"
-}
