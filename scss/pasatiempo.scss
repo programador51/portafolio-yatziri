@@ -1,0 +1,62 @@
+@import "./global.scss";
+@import "./bg.scss";
+@import "./glass.scss";
+@import "./dropdown.scss";
+
+:root {
+  --border: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #145169;
+  padding: 10px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section {
+  margin: 1rem 0;
+  position: relative;
+  height: 500px;
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border);
+  }
+  div {
+    position: absolute;
+    bottom: 0;
+    max-height: 200px;
+    padding: 0.55rem;
+    overflow: auto;
+    background-color: hsla(0, 0%, 0%, 0.813);
+    border-radius: 0 0 var(--border) var(--border);
+  }
+}
+
+h4 {
+  background-color: hsla(0, 0%, 0%, 0.813);
+  padding: 0.55rem;
+  border-radius: var(--border) var(--border) 0 0;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}

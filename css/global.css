@@ -9,7 +9,12 @@
   padding: 0;
 }
 
-.navigate, .dropbtn {
+:root {
+  --bgColor: #145169;
+}
+
+.navigate,
+.dropbtn {
   text-decoration: none;
   background-color: white;
   width: auto;
@@ -21,7 +26,8 @@
   transition: all 0.25s ease-in-out;
 }
 
-.navigate:hover, .dropbtn:hover {
+.navigate:hover,
+.dropbtn:hover {
   background-color: #2e2e2e;
   color: white;
 }

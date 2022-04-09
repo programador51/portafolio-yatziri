@@ -9,12 +9,7 @@
   padding: 0;
 }
 
-:root {
-  --bgColor: #145169;
-}
-
-.navigate,
-.dropbtn {
+.navigate, .dropbtn {
   text-decoration: none;
   background-color: white;
   width: auto;
@@ -26,8 +21,7 @@
   transition: all 0.25s ease-in-out;
 }
 
-.navigate:hover,
-.dropbtn:hover {
+.navigate:hover, .dropbtn:hover {
   background-color: #2e2e2e;
   color: white;
 }
@@ -268,6 +262,10 @@
   border-radius: 0 0 10px 10px;
 }
 
+:root {
+  --border: 0px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -276,26 +274,51 @@ body {
   align-items: center;
 }
 
-p {
-  margin: 15px 2rem;
-}
-
-h1 {
-  margin: 10px 0;
-  padding: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 header {
+  position: sticky;
+  top: 0;
+  background-color: #145169;
+  padding: 10px;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+section {
+  margin: 1rem 0;
+  position: relative;
+  height: 500px;
+}
+
+section img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border);
+}
+
+section div {
+  position: absolute;
+  bottom: 0;
+  max-height: 200px;
+  padding: 0.55rem;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.813);
+  border-radius: 0 0 var(--border) var(--border);
+}
+
+h4 {
+  background-color: rgba(0, 0, 0, 0.813);
+  padding: 0.55rem;
+  border-radius: var(--border) var(--border) 0 0;
+}
+
+nav {
   position: sticky;
   top: 0;
-  background-color: var(--bgColor);
 }
-/*# sourceMappingURL=bio.css.map */
+/*# sourceMappingURL=pasatiempo.css.map */

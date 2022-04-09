@@ -11,20 +11,6 @@ body {
   align-items: center;
 }
 
-p {
-  margin: 15px 2rem;
-}
-
-h1 {
-  margin: 10px 0;
-  padding: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -32,4 +18,24 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--bgColor);
+  padding: 20px;
+}
+
+img:nth-of-type(1) {
+  float: left;
+  margin: 1rem;
+}
+
+img:nth-of-type(2) {
+  float: right;
+  margin: 1rem;
+}
+
+img:nth-of-type(3) {
+  float: right;
+  margin: 1rem;
+}
+
+section {
+  margin: 0 1rem 1rem 1rem;
 }
