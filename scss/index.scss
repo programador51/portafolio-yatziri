@@ -1,6 +1,5 @@
 @import "./global.scss";
 
-
 * {
   color: white;
 }
@@ -28,16 +27,16 @@ header {
 
 section {
   display: flex;
-  img{
+  img {
     height: 100%;
-    border-radius:0 0 0 10px;
+    border-radius: 0 0 0 10px;
     max-width: 50%;
     object-fit: cover;
   }
   align-items: center;
   ul {
     width: 100%;
-    margin:0 10px;
+    margin: 0 10px;
     box-sizing: border-box;
   }
   li {
@@ -52,14 +51,14 @@ section {
     flex-direction: column;
   }
 
-  nav{
+  nav {
     display: flex;
     justify-content: space-evenly;
-    margin:20px;
+    margin: 20px;
   }
 }
 
-.profile_picture_container{
+.profile_picture_container {
   width: 100%;
 }
 
@@ -78,4 +77,4 @@ section {
 }
 
 @import "./bg.scss";
-@import './dropdown.scss';
+@import "./dropdown.scss";
