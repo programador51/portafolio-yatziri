@@ -290,6 +290,14 @@ nav {
   justify-content: space-evenly;
 }
 
+nav * {
+  margin: 0 1rem 0 0;
+}
+
+nav div a {
+  margin: 0;
+}
+
 header {
   display: flex;
   align-items: center;

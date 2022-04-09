@@ -23,6 +23,15 @@ h1 {
 nav {
   display: flex;
   justify-content: space-evenly;
+  * {
+    margin: 0 1rem 0 0;
+  }
+
+  div {
+    a {
+      margin: 0;
+    }
+  }
 }
 
 header {
