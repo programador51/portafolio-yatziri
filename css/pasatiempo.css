@@ -292,7 +292,6 @@ header {
 }
 
 section {
-  margin: 1rem 0;
   position: relative;
   height: 500px;
 }
@@ -326,5 +325,16 @@ h4 {
 nav {
   position: sticky;
   top: 0;
+}
+
+.referenceIlustrations {
+  display: flex;
+  align-items: center;
+}
+
+.referenceIlustrations img {
+  max-height: 250px;
+  min-width: 50%;
+  object-fit: cover;
 }
 /*# sourceMappingURL=pasatiempo.css.map */
