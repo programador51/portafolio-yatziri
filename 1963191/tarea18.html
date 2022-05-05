@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 18</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 18 - Serie A</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate">Menu tareas</a>
+        </nav>
+      </header>
+
+      <p>
+        Construya un programa en JAVA. Que calcule e imprima la siguiente serie
+        para los N primeros términos
+      </p>
+      <p>1,8,243,16384,1953125,...</p>
+
+      <pre>
+          <code class="language-java">
+import java.util.Random;
+public class Task18 {
+    public static void main(String[] args){
+
+        int untilNumber = getUntilNumberSerie(args);
+
+        for(int i=1;i<=untilNumber;i++){
+            double serieNumber = Math.pow(i,2*i-1);
+            System.out.print(serieNumber+" ");
+        }
+    }
+
+    public static int getUntilNumberSerie(String[] args){
+        if(args.length==0){
+            System.out.println("Debes pasar en los argumentos de la consola hasta que número de serie ejecutar");
+            return getUntilNumberSerie(args);
+        }else{
+            return Integer.parseInt(args[0]);
+        }
+    }
+}
+        </code>
+      </pre>
+    </article>
+
+    <script src="./java.js"></script>
+  </body>
+</html>
