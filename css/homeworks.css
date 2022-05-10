@@ -335,4 +335,8 @@ ul > li {
 .arrayExample span {
   border: 1px solid black;
 }
+
+.glassContainer {
+  width: 90vw !important;
+}
 /*# sourceMappingURL=homeworks.css.map */
