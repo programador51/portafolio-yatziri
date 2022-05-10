@@ -65,3 +65,7 @@ section {
 .imageInformative:nth-child(odd) {
   float: right;
 }
+
+article {
+  overflow-x: hidden;
+}

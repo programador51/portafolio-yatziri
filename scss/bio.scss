@@ -42,3 +42,7 @@ header {
   top: 0;
   background-color: var(--bgColor);
 }
+
+article {
+  overflow-x: hidden;
+}

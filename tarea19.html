@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 19</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 19 - Búsqueda de un vector</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Elaborar un programa en JAVA que realice una búsqueda de un número en un
+        vector, mostrando solamente un mensaje indicando cuantas veces aparecio
+        el número.
+      </p>
+      <br />
+      <p><b>Ejemplo:</b></p>
+      <p>Valor a buscar: 4</p>
+      <p>El número 4 aparece 2 veces en el vector: [1 4 7 9 21 4 0 2 5 2]</p>
+
+      <pre>
+          <code class="language-java">
+import java.util.Random;
+
+public class Task19 {
+    public static void main(String[] args) {
+
+        int numberToSearch = getNumberToSearch(args);
+
+        int randomSizeArray = new Random(System.currentTimeMillis()).nextInt(20)+1;
+        
+        int[] randomArray = generateRandomArray(randomSizeArray);
+        
+        int repeatedTimesNumber = lookForRepeatedNumber(numberToSearch, randomArray);
+        String arrayAsAstring = getArrayAsString(randomArray);
+
+        System.out.println("El número "+numberToSearch+" aparece "+repeatedTimesNumber+" veces en el vector: "+arrayAsAstring);
+    }
+
+    public static int lookForRepeatedNumber(int numberToSearch,int[] arrayToLookFor){
+
+        int counterRepeatedNumber = 0;
+
+        for(int i = 0;i < arrayToLookFor.length;i++){
+            if(arrayToLookFor[i]==numberToSearch){
+                counterRepeatedNumber+=1;
+            }
+        }
+
+        return counterRepeatedNumber;
+    }
+
+    public static int getNumberToSearch(String[] args){
+        if(args.length==0){
+            return new Random(System.currentTimeMillis()).nextInt(10)+1;
+        }else{
+            return Integer.parseInt(args[0]);
+        }
+    }
+
+    public static String getArrayAsString(int[] array){
+
+        String arrayPrinted = "[";
+
+        for(int i = 0;i < array.length;i++){
+            arrayPrinted+=" "+array[i]+" ";
+        }
+
+        arrayPrinted+="]";
+
+        return arrayPrinted;
+        
+    }
+
+    public static int[] generateRandomArray(int sizeArray){
+
+        int randomNumbers[];
+        randomNumbers = new int[sizeArray];
+
+        for(int i = 0;i < sizeArray;i++){
+            randomNumbers[i] = new Random(i).nextInt(10)+1;
+        }
+
+        return randomNumbers;
+    }
+}
+        </code>
+      </pre>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>

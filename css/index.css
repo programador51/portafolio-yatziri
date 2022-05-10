@@ -307,6 +307,8 @@ section nav {
 
 .dropdown-content {
   display: none;
+  max-height: 250px;
+  overflow-y: auto;
   position: absolute;
   background-color: #f1f1f1;
   border-radius: 10px;

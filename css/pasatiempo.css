@@ -240,6 +240,8 @@
 
 .dropdown-content {
   display: none;
+  max-height: 250px;
+  overflow-y: auto;
   position: absolute;
   background-color: #f1f1f1;
   border-radius: 10px;
@@ -336,5 +338,9 @@ nav {
   max-height: 250px;
   min-width: 50%;
   object-fit: cover;
+}
+
+article {
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=pasatiempo.css.map */
