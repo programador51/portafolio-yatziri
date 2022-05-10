@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 16</title>
+    <link rel="stylesheet" href="css/java.css" />
+    <link rel="stylesheet" href="css/homeworks.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 16 - Conversión de temperatura</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Elabore un programa en JAVA que mediante un menú de opciones permita
+        calcular la conversion de escala de temperatura
+      </p>
+      <br />
+
+      <ul>
+        <li>De grados centigrados a grados farenheit</li>
+        <li>De grados farenheit a grados centigrados</li>
+      </ul>
+      <br />
+
+      <p><b>Nota:</b> Usar el cuadro de dialogo <b>showOptionDialog()</b></p>
+
+      <br />
+      <pre>
+          <code class="language-java">
+import javax.swing.JOptionPane;
+
+public class Task16 {
+
+    static int optionSelected;
+    static String[] options = {"°C ➡ °F", "°F ➡ °C"};
+    static float temperatureRequested;
+
+    public static void main(String[] args) throws Exception {
+
+        /**
+            * 0 - °C ➡ °F
+            * 1 - F ➡ °C
+            */
+        optionSelected = JOptionPane.showOptionDialog(null, "Selecciona una opcion", "Conversor de temperatura", 0, 0, null, options,null);
+
+        temperatureRequested = promptTemperature();
+        
+        float convertion = doConvertion();
+
+        String messageResult = String.format("%s %s = %s", temperatureRequested,options[optionSelected],convertion);
+
+        JOptionPane.showMessageDialog(null, messageResult, "Conversion", 1);
+        
+    }
+
+    public static float convertFarenheitToCelsius(float farenheit){
+        return (float)((farenheit - 32)/1.8);
+    }
+
+    public static float convertCelsiusToFarenheit(float celsius){
+        return (float)(celsius*1.8)+32;
+    }
+
+    public static float doConvertion(){
+        if(optionSelected==0){
+            return convertCelsiusToFarenheit(temperatureRequested);
+        }else{
+            return convertFarenheitToCelsius(temperatureRequested);
+        }
+    }
+
+    public static float promptTemperature(){
+        try {
+
+            float temperatureRequested = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cúal es la temperatura?"));
+
+            return temperatureRequested;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Por favor, inserta un número (¬_¬ )", "Error", 0);
+            return promptTemperature();
+        }
+    }
+}
+        </code>
+      </pre>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>

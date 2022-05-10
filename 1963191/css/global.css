@@ -1,0 +1,38 @@
+@font-face {
+  font-family: WorkSans-Regular;
+  src: url("../letras/WorkSans-Regular.ttf");
+}
+
+* {
+  font-family: WorkSans-Regular, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bgColor: #145169;
+}
+
+.navigate,
+.dropbtn {
+  text-decoration: none;
+  background-color: white;
+  width: auto;
+  border: none;
+  padding: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  color: black;
+  transition: all 0.25s ease-in-out;
+}
+
+.navigate:hover,
+.dropbtn:hover {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.navigate {
+  text-align: center;
+}
+/*# sourceMappingURL=global.css.map */

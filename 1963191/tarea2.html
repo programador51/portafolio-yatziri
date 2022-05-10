@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarea 18</title>
+    <title>Tarea 2</title>
     <link rel="stylesheet" href="css/homeworks.css" />
     <link rel="stylesheet" href="css/java.css" />
   </head>
@@ -32,7 +32,7 @@
 
     <article class="glassContainer">
       <header>
-        <h1>Tarea 18 - Serie A</h1>
+        <h1>Tarea 2 - Clasificación de lenguajes informáticos</h1>
 
         <nav>
           <a class="navigate" href="index.html">Inicio</a>
@@ -44,6 +44,7 @@
               <a href="personaje.html">Empresario</a>
             </div>
           </div>
+
           <a class="navigate" href="#" id="prev-homework">👈🏼</a>
           <div class="dropdown">
             <button class="dropbtn">Menú tareas</button>
@@ -54,36 +55,37 @@
       </header>
 
       <p>
-        Construya un programa en JAVA. Que calcule e imprima la siguiente serie
-        para los N primeros términos
+        Los lenguajes de programación se utilizan para hacer funcionar las
+        páginas web, las apps, el software y todo tipo de dispositivo que
+        requiere programación informática y conocimientos de código. De acuerdo
+        a su finalidad, los lenguajes de programación se clasifican en:
       </p>
-      <p>1,8,243,16384,1953125,...</p>
+      <br />
+      <ul>
+        <li>
+          <b>Lenguaje máquina</b>
+          <br />
+          <img src="./imagenes/binario.jpg" alt="lenguaje_binario" />
+        </li>
+        <li>
+          <b>Lenguajes de programación de bajo nivel</b>
+          <br />
+          <img src="./imagenes/bajo_nivel.gif" alt="lenguaje_bajo_nivel" />
+        </li>
+        <li>
+          <b>Lenguajes de programación de alto nivel</b>
+        </li>
+      </ul>
 
-      <pre>
-          <code class="language-java">
-import java.util.Random;
-public class Task18 {
-    public static void main(String[] args){
-
-        int untilNumber = getUntilNumberSerie(args);
-
-        for(int i=1;i<=untilNumber;i++){
-            double serieNumber = Math.pow(i,2*i-1);
-            System.out.print(serieNumber+" ");
-        }
-    }
-
-    public static int getUntilNumberSerie(String[] args){
-        if(args.length==0){
-            System.out.println("Debes pasar en los argumentos de la consola hasta que número de serie ejecutar");
-            return getUntilNumberSerie(args);
-        }else{
-            return Integer.parseInt(args[0]);
-        }
-    }
-}
-        </code>
-      </pre>
+      <br />
+      <p>
+        En grandes rasgos, el lenguaje máquina es el que usa cualquier máquina y
+        se basa en un código binario; los lenguajes bajo nivel ensamblador,
+        pueden variar según el ordenador o máquina que se utilice; y, por
+        último, el lenguaje de alto nivel es un lenguaje que utiliza comandos y
+        palabras (normalmente en inglés), las cuales es fácil de entender para
+        un programador.
+      </p>
     </article>
 
     <script src="./java.js"></script>
