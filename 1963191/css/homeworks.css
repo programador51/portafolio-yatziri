@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: WorkSans-Regular;
   src: url("../letras/WorkSans-Regular.ttf");
@@ -240,6 +241,8 @@
 
 .dropdown-content {
   display: none;
+  max-height: 250px;
+  overflow-y: auto;
   position: absolute;
   background-color: #f1f1f1;
   border-radius: 10px;
@@ -287,6 +290,15 @@ header {
   justify-content: space-between;
 }
 
+header h1 {
+  max-width: 45%;
+}
+
+ul img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -294,5 +306,37 @@ nav {
 
 article p {
   padding: 0 10px;
+}
+
+ul {
+  padding: 0 30px;
+}
+
+li > b::after {
+  content: ":";
+}
+
+ul > li {
+  list-style-type: "🟦 ";
+  margin: 0 0 5px 0;
+}
+
+.arrayExample {
+  display: flex;
+  align-items: center;
+}
+
+.arrayExample div:last-child {
+  display: grid;
+  grid-template-columns: repeat(4, 35px);
+  text-align: center;
+}
+
+.arrayExample span {
+  border: 1px solid black;
+}
+
+.glassContainer {
+  width: 90vw !important;
 }
 /*# sourceMappingURL=homeworks.css.map */
