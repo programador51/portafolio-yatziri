@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 6</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 6 - Identificadores Python</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Los identificadores sirven precisamente para eso, para identificar una
+        variable, función, clase, módulo u objeto. Suelen empezar con letras, en
+        mayúscula o minúscula, o con un guión bajo seguido de un cero y
+        <b>varias letras o números</b>.
+      </p>
+      <br />
+
+      <p>
+        Hay que tener varias cosas en cuenta, como que Python
+        <b>diferencia entre mayúsculas y minúsculas</b> o que no admite
+        caracteres de puntuación como @, $ o %.
+      </p>
+      <br />
+
+      <p>
+        <b>Palabras reservadas</b>
+      </p>
+      <p>
+        Hay una serie de palabras que no podemos emplear como constantes o
+        variables o como nombre identificador. Son todas en minúsculas y han
+        sido reservadas por el lenguaje Python.
+      </p>
+      <p>
+        En concreto, las palabras reservadas son: and, assert, break, class,
+        continue, def, del, elif, else, except, exec, finally, for, from,
+        global, if, imoort, in, is, lambda, not, or, pass, print, raise, return,
+        try, while, with, yield.
+      </p>
+
+      <br />
+      <p><b>Estructura de las líneas</b></p>
+      <p>
+        Un programa codificado con lenguaje Python está dividido en varias
+        líneas lógicas y cada una de ellas finaliza con una nueva línea. Si la
+        línea está en blanco, es ignorada por el intérprete de Python.
+      </p>
+      <br />
+
+      <p>
+        <b>Comentarios y citas</b>
+      </p>
+      <p>
+        En Python, los comentarios empiezan con el carácter <b>hash (#)</b>.
+        Nosotros podemos leernos, es más, deberíamos, ya que nos aportarán
+        información sobre el resto de código, pero el intérprete lo ignorará.
+      </p>
+      <br />
+      <p>Python admite tres tipos de paradigmas de programación</p>
+      <ul>
+        <li>POO</li>
+        <li>Orientada a procedimientos</li>
+        <li>Funcional</li>
+      </ul>
+
+      <p>
+        <b>
+          Descargar python
+          <a href="https://www.python.org/downloads/" target="_blank">aquí</a>
+        </b>
+      </p>
+
+      <p><b>Ejemplo</b></p>
+
+      <pre>
+        <code class="language-python">
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# sintaxis.py
+#
+# Copyright 2020
+#Declaracion de variables
+
+a = "Python" #Instruccion simple
+b = "Aprender" #Instruccion simple
+c = "Fácil" #Instruccion simple
+d = "Sintaxis" #Instruccion simple
+e = True #Instruccion simple
+
+#Bloque de codigo a continuacion
+if e == True: #Instruccion compuesta
+    print(b + " " + a + " es " + c + " " + "si comprendo su " + d)
+    #Sub-nivel Inst. Simple dentro de un #Bloque
+#Instrucciones simples nuevamente
+print("Se acaba de ejecutar una insturccion compuesta..")
+print("Pero ahora estamos ejecutando instrucciones simples")
+      </code>
+    </pre>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
