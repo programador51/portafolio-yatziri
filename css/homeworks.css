@@ -339,4 +339,17 @@ ul > li {
 .glassContainer {
   width: 90vw !important;
 }
+
+.relation span:nth-child(1)::after {
+  content: " ➡ ";
+}
+
+.tableHomework5 {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: repeat(8, 1fr);
+  text-align: center;
+  margin: 20px;
+  justify-content: center;
+}
 /*# sourceMappingURL=homeworks.css.map */

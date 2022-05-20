@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 4</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 4 - Compilar</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Compilar es el proceso de transformar un programa informático escrito en
+        un lenguaje en un programa equivalente en otro formato. Al programa que
+        se encarga de compilar se le llama compilador. A veces, a esta tarea se
+        le llama "ensamblar" o "construir", lo que suele implicar otros procesos
+        adicionales, e.j. empaquetarlo en formato binario. Normalmente, un
+        compilador transforma un lenguaje de alto nivel como C o Java, el cual
+        es legible por los humanos, en un lenguaje máquina que la CPU puede
+        entender. algunos compiladores que traducen de un lenguaje a otro del
+        mismo nivel son llamados transpiladores, por ejemplo al compilar de
+        TypeScript a JavaScript. Son considerados herramientas de productividad.
+      </p>
+
+      <br />
+      <p><b>Tipos compiladores</b></p>
+      <ul>
+        <li>
+          Una sola pasada: examina el código fuente una vez, generando el código
+          o programa objeto
+        </li>
+        <li>
+          Pasadas múltiples: requieren pasos intermedios para producir un código
+          en otro lenguaje, y una pasada final para producir y optimizar el
+          código producido durante los pasos anteriores.
+        </li>
+        <li>
+          Optimación: lee un código fuente, lo analiza y descubre errores
+          potenciales sin ejecutar el programa.
+        </li>
+        <li>
+          Compiladores incrementales: generan un código objeto instrucción por
+          instrucción (en vez de hacerlo para todo el programa) cuando el
+          usuario teclea cada orden individual. El otro tipo de compiladores
+          requiere que todos los enunciados o instrucciones se compilen
+          conjuntamente.
+        </li>
+        <li>
+          Ensamblador: el lenguaje fuente es lenguaje ensamblador y posee una
+          estructura sencilla.
+        </li>
+        <li>
+          Compilador cruzado: se genera código en lenguaje objeto para una
+          máquina diferente de la que se está utilizando para compilar. Es
+          perfectamente normal construir un compilador de Pascal que genere
+          código para MS-DOS y que el compilador funcione en Linux y se haya
+          escrito en C++.
+        </li>
+        <li>
+          Compilador con montador: compilador que compila distintos módulos de
+          forma independiente y después es capaz de enlazarlos.
+        </li>
+        <li>
+          Autocompilador: compilador que está escrito en el mismo lenguaje que
+          va a compilar. Evidentemente, no se puede ejecutar la primera vez.
+          Sirve para hacer ampliaciones al lenguaje, mejorar el código generado,
+          etc.
+        </li>
+
+        <li>
+          Metacompilador: es sinónimo de compilador de compiladores y se refiere
+          a un programa que recibe como entrada las especificaciones del
+          lenguaje para el que se desea obtener un compilador y genera como
+          salida el compilador para ese lenguaje. El desarrollo de los
+          metacompiladores se encuentra con la dificultad de unir la generación
+          de código con la parte de análisis.
+        </li>
+
+        <li>
+          Descompilador: es un programa que acepta como entrada código máquina y
+          lo traduce a un lenguaje de alto nivel, realizando el proceso inverso
+          a la compilación.
+        </li>
+      </ul>
+
+      <br />
+      <p><b>Interprete</b></p>
+      <p>
+        Un intérprete es un programa informático que procesa el código fuente de
+        un proyecto de software durante su tiempo de ejecución, es decir,
+        mientras el software se está ejecutando, y actúa como una interfaz entre
+        ese proyecto y el procesador. Un intérprete siempre procesa el código
+        línea por línea, de modo que lee, analiza y prepara cada secuencia de
+        forma consecutiva para el procesador. Este principio también se aplica a
+        las secuencias recurrentes, que se ejecutan de nuevo cada vez que
+        vuelven a aparecer en el código. Para procesar el código fuente del
+        software, el intérprete recurre a sus propias bibliotecas internas: en
+        cuanto una línea de código fuente se ha traducido a los correspondientes
+        comandos legibles por máquina, esta se envía directamente al procesador.
+      </p>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>

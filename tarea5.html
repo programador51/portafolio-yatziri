@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 5</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 5 - Prolog</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        El sistema Prolog reconoce el tipo de un objeto en el programa por medio
+        de su forma sintáctica. Esto es posible porque la sintaxis de Prolog
+        especifica diferentes formas para cada tipo de datos. La forma de
+        distinguir entre átomos y variables es que las variables empiezan con
+        letras mayúsculas, mientras que los átomos con minúsculas. No existe
+        información adicional para comunicarle a Prolog el orden para reconocer
+        el tipo de un objeto.
+      </p>
+
+      <br>
+      <p>Los átomos pueden construirse de 3 formas:</p>
+      <p>
+          <ul>
+              <li>Cadenas de letras</li>
+              <li>Dígitos</li>
+              <li>Caracter <code>_</code> empezando con una letra minúscula
+            </li>
+          </ul>
+      </p>
+
+      <br>
+      <p><b>Ejemplo</b></p>
+      <p>
+          <ul>
+          <li>
+            categoria_x
+          </li>
+          <li>procedmiento_uno</li>
+          <li>x25</li>
+          <li>pedro</li>
+          <li>ana</li>
+          <li>x_25</li>
+        </ul>
+      </p>
+
+      <br>
+      <p>
+          <b>
+            Cadenas de caracteres especiales
+          </b>
+          
+
+      </p>
+      <p>Cadenas de caracteres encerradas en apóstrofes. Esto se utiliza cuando se quiere, por ejemplo, tener un átomo que empiece con una letra mayúscula.</p>
+
+      <br>
+      <p><b>Ejemplo</b></p>
+      <p>
+          <ul>
+              <li>'Tom'
+                
+                </li>
+                <li>'Polo_Norte'</li>
+          </ul>
+      </p>
+      <p><b>Nota:</b>en algunos compiladores, en vez de utilizar apóstrofes se utilizan comillas " " como en el caso de Prolog.</p>
+
+    <br>
+      <p>
+          <b>Números</b>
+      </p>
+      <p>
+        Los números usados en Prolog incluyen números enteros y números reales. La sintaxis de los enteros es simple:  
+      </p>
+    <p>
+        <ul>
+            <li>1</li>
+            <li>1313</li>
+            <li>0</li>
+        </ul>
+    </p>
+    <p>El tratamiento de números reales depende de la implementación de Prolog. Asumiendo una sintaxis simple:</p>
+    <ul>
+        <li>3.14</li>
+        <li>-0.0035</li>
+        <li>100.2</li>
+    </ul>
+    <p>Los números reales no son muy utilizados en programas de Prolog. La razón de esto es que Prolog es principalmente utilizado como un lenguaje simbólico, no de computación numérica. </p>
+
+    <br>
+    <p><b>Variables</b></p>
+    <p>Las variables son cadenas de letras, dígitos y el signo '_'. Estas empiezan con una letra mayúscula o el símbolo '_':</p>
+
+    <ul>
+        <li>X</li>
+        <li>Objeto2</li>
+        <li>_23</li>
+        <li>Resultado</li>
+        <li>_x23</li>
+    </ul>
+
+    <br>
+    <p><b>Lista participante</b></p>
+    <p>Cuando una variable aparece en una cláusula sola, no se necesita inventar un nombre para ella. Se usa llamarla variable "anónima", cuando es escrito únicamente el signo '_'. Por ejemplo, consideremos la siguiente regla</p>
+    <br>
+    <ul>
+        <li>hijo(X) :- padre (X,Y).
+            <p>Para toda X, X tiene un hijo si X es el padre de alguna Y. Nosotros estamos definiendo la propiedad hijo el cual, no depende del nombre del hijo. Entonces, aquí hay un lugar en donde podemos usar una variable anónima. </p>
+        </li>
+    </ul>
+
+    <br>
+    <p><b>Operadores</b></p>
+    <p>Los operadores de Prolog están divididos en dos clases: aritméticos y relacionales.</p>
+    <p>Los operadores aritméticos incluyen los símbolos para suma, resta, multiplicación y división . En Prolog, si dos enteros son sumados, restados o multiplicados, el resultado será un entero. Siempre que uno de los operandos, en cualquiera de estas operaciones sea un número real, el resultado siempre será un real. El resultado de una división, siempre que los operandos sean enteros o reales, será siempre real.</p>
+
+    <br>
+    <p>
+        <b>Aritmeticos</b>
+    </p>
+    <p>Todas las versiones de Prolog soportan los siguientes operadores aritméticos, listados en el orden de prioridad de ejecución.</p>
+    <ul>
+        <li class="relation">
+            <span>+</span>
+            <span>Suma</span>
+        </li>
+        <li class="relation">
+            <span>-</span>
+            <span>Resta</span>
+        </li>
+        <li class="relation">
+            <span>*</span>
+            <span>Multiplicacion</span>
+        </li>
+        <li class="relation">
+            <span>/</span>
+            <span>Division</span>
+        </li>
+        <li class="relation">
+            <span>//</span>
+            <span>Division entera</span>
+        </li>
+        <li class="relation">
+            <span>^</span>
+            <span>Potencia</span>
+        </li>
+    </ul>
+
+    <br>
+    <p>Los paréntesis se pueden utilizar para dar preferencia de ejecución en una expresión compuesta. Prolog utiliza la precedencia de operadores con la regla de la mano izquierda.
+        A continuación se muestran algunas operaciones más complejas que PROLOG provee:
+        </p>
+
+        <div class="tableHomework5">
+            <b>Operacion</b><b>Descripcion</b>
+            <p>Sqrt(x)</p><p>Calcula la raíz cuadrada de la variable</p>
+            <p>log(X)</p><p>Calcula el logaritmo de X</p>
+            <p>ln(X)</p><p>Calcula el logaritmo natural de X</p>
+            <p>abs(B)</p><p>Regresa el valor absoluto de B</p>
+            <p>sin(T)</p><p>Seno de T</p>
+            <p>cos(A)</p><p>Coseno de A</p>
+            <p>tan(C)</p><p>Tangente de C</p>
+        </div>
+
+        <br>
+        <p><b>Relacionales</b></p>
+        <ul>
+            
+            <li class="relation">
+                <span>=</span>
+                <span>Igual que</span>
+            </li>
+            <li class="relation">
+                <span> > </span>
+                <span>Mayor que</span>
+            </li>
+            <li class="relation">
+                <span> >= </span>
+                <span>Mayor o igual que</span>
+            </li>
+            <li class="relation">
+                <span> <= </span>
+                <span>Menor o igual que</span>
+            </li>
+
+            <li class="relation">
+                <span> <> </span>
+                <span>Desigual que</span>
+            </li>
+
+            <li class="relation">
+                <span> =/= </span>
+                <span>Diferente que</span>
+            </li>
+
+            <li class="relation">
+                <span>is</span>
+                <span>Evaluador de expresion</span>
+            </li>
+
+            <li class="relation">
+                <span>seed</span>
+                <span>Generador de numeros aleatorios</span>
+            </li>
+        </ul>
+
+        <p><b>Descargar prolog <a href="https://www.swi-prolog.org/download/stable" target="_blank">aquí</a></b></p>
+
+         <br>
+         <p><b>Paradigma declarativo</b></p>
+         <p>Este paradigma no necesita definir algoritmos puesto que describe el problema en lugar de encontrar una solución al mismo. Este paradigma utiliza el principio del razonamiento lógico para responder a las preguntas o cuestiones consultadas.</p>
+         <p>Este paradigma a su vez se divide en dos:</p>
+         <ul>
+             <li>Programación lógica: Prolog</li>
+             <li>Programación funcional: Lisp , Scala , Java , Kotlin</li>
+         </ul>
+
+         <br>
+         <p><b>Ejemplo de prolog</b></p>
+      <pre>
+        <code class="language-prolog">
+canario(tweety).
+gato(michifuz).
+perro(fido).
+delfin(flipper).
+pezespada(cuchi).
+
+pueden(michifuz,caminar).
+pueden(michifuz,correr).
+pueden(fido,caminar).
+pueden(fido,correr).
+pueden(tweety,volar).
+pueden(flipper,nadar).
+pueden(cuchi,nadar).
+pueden(aves,volar).
+pueden(mamiferos,correr).
+pueden(mamiferos,caminar).
+pueden(felinos,caminar).
+pueden(peces,nadar).
+pueden(delfines,nadar).
+
+caminar(perro).
+caminar(gato).
+
+felinos(gatos).
+aves(canarios).
+mamiferos(perros).
+mamiferos(gatos).
+peces(pezespada).
+peces(delfin).
+      </code>
+    </pre>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
