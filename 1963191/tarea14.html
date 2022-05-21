@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 14</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 14 - SQL</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        SQL es un lenguaje estándar de consultas o queries a bases de datos. La
+        programación o consultas en SQL sirve para almacenar, manipular y
+        recuperar datos de bases de datos relacionales. Algunos de los sistemas
+        de gestión de bases de datos más utilizados son los de ORACLE, Microsoft
+        SQL Server, MySQL o PostgreSQL
+      </p>
+      <br />
+
+      <p><b>Sintaxis de SQL</b></p>
+      <p>
+        Para explicar la sintaxis de SQL, en primer lugar, es importante decir
+        que una base de datos a menudo contiene muchas tablas, a cada tabla se
+        le asigna un nombre por ejemplo «Datos_Clientes«. Estas tablas tienen
+        filas y columnas y contienen distintos valores.
+      </p>
+      <br />
+      <p>
+        Para extraer los datos o consultarlos, transformarlos o convertirlos,
+        mostramos un resumen del curso SQL con los comandos más importantes:
+      </p>
+
+      <p>
+          <ul>
+              <li>SELECT: La instrucción SELECT se utiliza para seleccionar distintos datos de contiene una base de datos, A continuación mostramos un ejemplo:
+                SELECT Nombre, Apellidos, ...
+                FROM Datos_Clientes;
+                </li>
+                <li>SELECT DISTINCT: Para seleccionar los distintos valores de una tabla, es decir, omitir filas (resultados) que esten repetidos.
+                    <br>SELECT DISTINCT Nombre, Apellidos, ...
+                    FROM Datos_Clientes;
+                    
+                </li>
+                <li>WHERE: La instrucción WHERE es utilizada para establecer condiciones y filtros a la query.
+                    SELECT columna1, ...
+                    FROM nombre_tabla
+                    WHERE condición;
+                    </li>
+                    <li>AND, OR, NOT: Los operadores AND, OR y NOT se utilizan en la cláusula WHERE, dependiendo del tipo de condición que se quiera establecer.
+                        SELECT columna1
+                        FROM nombre_tabla 
+                        WHERE NOT condición1 AND/OR condición2;
+                </li>
+          </ul>
+      </p>
+
+      <br>
+
+      <p><b>Paradigma</b></p>
+      <p> El alcance de SQL incluye la inserción de datos, consultas, actualizaciones y borrado, la creación y modificación de esquemas y el control de acceso a los datos. También el SQL a veces se describe como un lenguaje declarativo, también incluye elementos procesales.</p>
+      <br>
+      <p><b>Descargar SQL <a href="https://www.microsoft.com/es-mx/sql-server/sql-server-downloads" target="_blank">aquí</a></b></p>
+
+      <br>
+      <p><b>Ejemplo de código SQL</b></p>
+      <pre>
+          <code class="language-sql">
+ALTER PROCEDURE [dbo].[sp_GetDocumentItemsV2](
+    @idDocument INT
+)
+
+AS BEGIN
+
+    SELECT
+        DocumentItems.idItem AS id,
+        DocumentItems.document AS idDocument,
+
+        DocumentItems.unit_price AS [pu.number],
+        FORMAT(DocumentItems.unit_price,'C','mx-MX') AS [pu.text],
+
+        DocumentItems.unitSellingPrice AS [puVenta.number],
+        FORMAT(DocumentItems.unitSellingPrice,'C','mx-MX') AS [puVenta.text],
+
+        DocumentItems.unit_cost AS [cu.number],
+        FORMAT(DocumentItems.unit_cost,'C','mx-MX') AS [cu.text],
+        Catalogue.id_code AS [catalogue.id],
+        CONCAT(Catalogue.sku,' - ',Catalogue.description) AS [catalogue.description],
+        Catalogue.unit_price AS [catalogue.puVenta.number],
+        FORMAT(Catalogue.unit_price,'C','mx-MX') AS [catalogue.puVenta.text],
+
+        Catalogue.unit_cost AS [catalogue.cuVenta.number],
+        FORMAT(Catalogue.unit_cost,'C','mx-MX') AS [catalogue.cuVenta.text],
+
+        Catalogue.sku AS [catalogue.sku],
+
+        Catalogue.iva AS [catalogue.iva.number],
+        CONCAT(Catalogue.iva,'%') AS [catalogue.iva.text],
+
+        DocumentItems.quantity AS quantity,
+
+        (DocumentItems.unit_price - DocumentItems.unitSellingPrice) * DocumentItems.quantity AS [discount.money.number],
+
+        FORMAT(((DocumentItems.unit_price - DocumentItems.unitSellingPrice) * DocumentItems.quantity),'C','mx-MX') AS [discount.money.text],
+
+        DocumentItems.discount AS [discount.number],
+        CONCAT(DocumentItems.discount,'%') AS [discount.text],
+        
+        DocumentItems.subTotal AS [subtotal.number],
+        FORMAT(DocumentItems.subTotal,'C','mx-MX') AS [subtotal.text],
+
+        DocumentItems.totalImport AS [importe.number],
+        FORMAT(DocumentItems.totalImport,'C','mx-MX') AS [importe.text],
+
+        Currencies.currencyID AS [currency.id],
+        Currencies.code AS [currency.code],
+        Currencies.symbol AS [currency.symbol],
+        Currencies.description AS [currency.description],
+
+        DocumentItems.iva AS [iva.money.number],
+        FORMAT(DocumentItems.iva,'C','mx-MX') AS [iva.money.text],
+
+        DocumentItems.ivaPercentage AS [iva.percentage.number],
+        CONCAT(DocumentItems.ivaPercentage,'%') AS [iva.percentage.text],
+
+        DocumentItems.unitPriceBeforeExchange AS [beforeExchange.pu.number],
+        FORMAT(DocumentItems.unitPriceBeforeExchange,'C','mx-MX') AS [beforeExchange.pu.text],
+
+        DocumentItems.unitCostBeforeExchange AS [beforeExchange.cu.number],
+        FORMAT(DocumentItems.unitCostBeforeExchange,'C','mx-MX') AS [beforeExchange.cu.text],
+
+        DocumentItems.ivaBeforeExchange AS [beforeExchange.iva.number],
+        FORMAT(DocumentItems.ivaBeforeExchange,'C','mx-MX') AS [beforeExchange.iva.text],
+
+        DocumentItems.subTotalBeforeExchange AS [beforeExchange.importe.number],
+        FORMAT(DocumentItems.subTotalBeforeExchange,'C','mx-MX') AS [beforeExchange.importe.text],
+
+        DocumentItems.unitSellingPriceBeforeExchange AS [beforeExchange.subtotal.number],
+        FORMAT(DocumentItems.unitSellingPriceBeforeExchange,'C','mx-MX') AS [beforeExchange.subtotal.text],
+
+        DocumentItems.[order] AS 'order',
+
+        UEN.UENID AS [uen.id],
+        UEN.description AS [uen.description],
+        UEN.family AS [uen.family],
+        UEN.subFamily AS [uen.subFamily],
+        UEN.iva AS [uen.iva.number],
+        CONCAT(UEN.iva,'%') AS [uen.iva.text]
+        
+        FROM DocumentItems
+
+        JOIN Catalogue ON DocumentItems.idCatalogue = Catalogue.id_Code
+        JOIN Currencies ON Catalogue.currency = Currencies.currencyID
+        JOIN UEN ON Catalogue.uen = UEN.UENID
+
+        WHERE 
+        document = @idDocument AND
+        DocumentItems.status = 1
+
+        ORDER BY DocumentItems.[order] ASC
+
+    FOR JSON PATH, ROOT('docItems'), INCLUDE_NULL_VALUES;
+
+END
+GO            
+
+-- ============================================[FOLLOWING RESULT OF QUERY]=================================================
+-- {
+--     "items": [
+--         {
+--             "id": 1048,
+--             "idDocument": 1508,
+--             "pu": {
+--                 "number": 12.5,
+--                 "text": "$12.50"
+--             },
+--             "puVenta": {
+--                 "number": 12.5,
+--                 "text": "$12.50"
+--             },
+--             "cu": {
+--                 "number": 4,
+--                 "text": "$4.00"
+--             },
+--             "catalogue": {
+--                 "id": 402,
+--                 "description": "Microsoft 365 Business STD",
+--                 "puVenta": {
+--                     "number": 12.5,
+--                     "text": "$12.50"
+--                 },
+--                 "cuVenta": {
+--                     "number": 4,
+--                     "text": "$4.00"
+--                 },
+--                 "sku": "CSP-01",
+--                 "iva": {
+--                     "number": 16,
+--                     "text": "16.00%"
+--                 }
+--             },
+--             "quantity": 2,
+--             "discount": {
+--                 "money": {
+--                     "number": 0,
+--                     "text": "$0.00"
+--                 },
+--                 "number": 0,
+--                 "text": "0.0000%"
+--             },
+--             "subtotal": {
+--                 "number": 29,
+--                 "text": "$29.00"
+--             },
+--             "importe": {
+--                 "number": 25,
+--                 "text": "$25.00"
+--             },
+--             "currency": {
+--                 "id": 2,
+--                 "code": "USD",
+--                 "symbol": "$",
+--                 "description": "Moneda estadounidense"
+--             },
+--             "iva": {
+--                 "money": {
+--                     "number": 4,
+--                     "text": "$4.00"
+--                 },
+--                 "percentage": {
+--                     "number": 16,
+--                     "text": "16.00%"
+--                 }
+--             },
+--             "beforeExchange": {
+--                 "pu": {
+--                     "number": 12.5,
+--                     "text": "$12.50"
+--                 },
+--                 "cu": {
+--                     "number": 4,
+--                     "text": "$4.00"
+--                 },
+--                 "iva": {
+--                     "number": 4,
+--                     "text": "$4.00"
+--                 },
+--                 "importe": {
+--                     "number": 25,
+--                     "text": "$25.00"
+--                 },
+--                 "subtotal": {
+--                     "number": 29,
+--                     "text": "$29.00"
+--                 }
+--             },
+--             "order": 1,
+--             "uen": {
+--                 "id": 1,
+--                 "description": "Microsoft Office 365",
+--                 "family": "Microsoft",
+--                 "subFamily": "Office 365",
+--                 "iva": {
+--                     "number": 16,
+--                     "text": "16.00%"
+--                 }
+--             }
+--         }
+--     ]
+-- }
+-- ========================================================================================================================
+          </code>
+      </pre>
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
