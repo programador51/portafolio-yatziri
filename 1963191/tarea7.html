@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 7</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 7 - Sintaxis de Scheme</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza
+        la notación prefija. Por ejemplo, si se desea realizar la suma 1+1, se
+        debe programar la siguiente instrucción: (+ 1 1)
+      </p>
+      <p>
+        Los paréntesis son obligatorios, ya que separan las instrucciones que
+        serán evaluadas por el intérprete. Para realizar comentarios dentro del
+        código, se utiliza el ";", así se marca que toda la línea será de
+        comentario <b>Ejemplo</b>:
+      </p>
+      <br />
+      <p>;Esta línea es un comentario, y la orden de abajo es ejecutada</p>
+      <p>(+ 1 1)</p>
+
+      <br />
+      <p><b>Sintaxis Básica</b></p>
+      <ul>
+        <li class="relation">
+          <span>Expresion</span>
+          <span>átomo | lista</span>
+        </li>
+        <li class="relation">
+          <span>átomo</span>
+          <span>número | string | identificador | caracter | boolean</span>
+        </li>
+        <li class="relation">
+          <span>lista</span>
+          <span>'('secuencia-expresión')'</span>
+        </li>
+        <li class="relation">
+          <span>secuencia-expresión</span>
+          <span>expresion-secuencia - expresión | expresión </span>
+        </li>
+        <li class="relation">
+          <span>función</span>
+          <span>(nombre_funcion argumento1 argumento2... argumento n)</span>
+        </li>
+      </ul>
+
+      <br />
+      <p><b>Variables locales y globales</b></p>
+      <p>
+        Las variables son dinámicamente tipadas. Dicho de otra forma, no se debe
+        especificar lo que se va a guardar dentro de la misma. Las variables
+        globales se nombran con la instrucción (define nombre valor) Por
+        ejemplo, (define variable 5).
+      </p>
+      <p>
+        Por otro lado, las variables locales se definen con la instrucción ( let
+        variables función). Por ejemplo: sumar dos números guardados en una
+        variable local
+      </p>
+      <br />
+      <p>
+        (let ;variables de la operación ((numero1 5) (numero2 7)) ;instrucción
+        que suma los números, es decir, la función (+ numero1 numer2))
+      </p>
+
+      <br />
+
+      <p><b>Creando Procedimientos Completos</b></p>
+      <p>
+        Utilizando la instrucción (define (nombre args) función) se crea un
+        procedimiento dentro del programa. En mi caso, voy a implementar la
+        instrucción del ejemplo anterior en una función
+      </p>
+      <br />
+      <p>; función que suma dos números agregados como argumento</p>
+      <p>(define (suma num1 num2)</p>
+      <p>
+        ; implementación del let anterior, aunque no es estrictamente necesario
+      </p>
+      <p>(let</p>
+      <p>;variables de la operación</p>
+      <p>((numero1 num1)</p>
+      <p>(numero2 num2))</p>
+      <p>; instrucción que suma los números, es decir, la función</p>
+      <p>(+ numero1 numero2))</p>
+
+      <br />
+      <p>
+        De la misma manera, el procedimiento anterior pudo ser escrito de esta
+        manera:
+      </p>
+      <br />
+      <p>
+        ;segunda implementación de suma de dos números, esta vez, sin el let
+      </p>
+      <p>(define (suma num1 num2)</p>
+      <p>(+ num1 num2))</p>
+
+      <br />
+      <p>
+        para llamar a la función creada, se utiliza la orden (función args).
+        Así, para llamar a nuestra función de suma, se escribe:
+      </p>
+      <p>(suma 2 3)</p>
+      <br />
+      <p>
+        Se llama con dos números, debido a que con esa cantidad de argumentos se
+        estableció la función.
+      </p>
+      <p>
+        <b>
+          Descargar Scheme
+          <a
+            href="https://es.freedownloadmanager.org/Windows-PC/PLT-Scheme-GRATIS.html"
+            target="_blank"
+            >aquí</a
+          >
+        </b>
+      </p>
+      <br />
+      <p><b>Ejemplo de Scheme:</b></p>
+      <img src="./imagenes/scheme.png" alt="scheme_code" />
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
