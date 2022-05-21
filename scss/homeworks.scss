@@ -90,3 +90,25 @@ ul > li {
   margin: 20px;
   justify-content: center;
 }
+
+.tableHomework10,
+.tableHomework11 {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  margin: 20px;
+  justify-content: center;
+  b {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  * {
+    padding: 2px;
+    border: 1px solid black;
+  }
+}
+
+.tableHomework11 {
+  grid-template-columns: repeat(3, 300px);
+}

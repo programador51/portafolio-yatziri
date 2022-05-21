@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 10</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 10 - Gödel</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p><b>Paso 1</b></p>
+      <p>
+        Los números de Gödel se construyen con referencia a símbolos de cálculo
+        proposicional y la aritmética formal. Cada símbolo se asigna primero a
+        un número natural, por tanto:
+      </p>
+
+      <div class="tableHomework10">
+        <b>Símbolos lógicos</b>
+        <b>Números 1:12</b>
+        <span>¬</span>
+        <span>1 ("no")</span>
+        <span>Ⱥ</span>
+        <span>2 ("para todos")</span>
+        <span>→</span>
+        <span>3 ("si, entonces")</span>
+        <span>v</span>
+        <span>4 ("o")</span>
+        <span>^</span>
+        <span>5 ("y")</span>
+        <span>(</span>
+        <span>6</span>
+        <span>)</span>
+        <span>7</span>
+        <span>S</span>
+        <span>8 ("es el sucesor de")</span>
+        <span>0</span>
+        <span>9</span>
+        <span>=</span>
+        <span>10</span>
+        <span>.</span>
+        <span>11</span>
+        <span>+</span>
+        <span>12</span>
+        <b>Símbolos proposicionales</b>
+        <b>Números más grandes que 12 y divisibles por 3</b>
+        <span>P</span>
+        <span>12</span>
+        <span>Q</span>
+        <span>15</span>
+        <span>R</span>
+        <span>18</span>
+        <span>S</span>
+        <span>21</span>
+        <b>Variables individuales</b
+        ><b>Números más grandes que 12 con resto 1 cuando se dividen por 3</b>
+        <span>v</span>
+        <span>13</span>
+        <span>x</span>
+        <span>16</span>
+        <span>y</span>
+        <span>19</span>
+        <b>Símbolos de predicado</b>
+        <b>Números más grandes que 12 con resto 2 cuando se dividen por 3</b>
+        <b>E</b>
+        <span>14</span>
+        <span>F</span>
+        <span>17</span>
+        <span>G</span>
+        <span>20</span>
+      </div>
+
+      <br />
+      <p>
+        Y así para todos los símbolos posibles. La sintaxis del cálculo
+        proposicional asegura que no hay ambigüedad entre el símbolo "P" y el
+        símbolo "+" aunque ambos estén asignados al número 12.
+      </p>
+
+      <br />
+      <p><b>Paso 2</b></p>
+      <p>
+        A cada enunciado aritmético se le asigna un número de Gödel único
+        utilizando series de números primos. Se basa básicamente en el siguiente
+        código: 1.er primo carácter × 2º primo carácter × 3.er primo carácter
+        etc.
+      </p>
+      <br />
+      <p>
+        Por ejemplo el enunciado x, P (x) se convierte en 22 × 316 × 512 × 76 ×
+        1116 × 137, porque {2, 3, 5, 7, 11,...} es la serie de primos, y 2, 16,
+        12, 6, 16, 7 son los códigos de los caracteres. Este es un número
+        bastante grande, pero perfectamente determinado:
+        14259844433335185664666562849653536301757812500. Es importante ver que,
+        por el teorema fundamental de la aritmética, este número tan grande se
+        puede descomponer en sus factores primos, y por tanto se puede convertir
+        un número de Gödel en la secuencia de caracteres original.
+      </p>
+
+      <p><b>Paso 3</b></p>
+      <p>
+        Finalmente, a las secuencias de enunciados se les asigna un número de
+        Gödel, de manera que la secuencia Enunciado 1 (GN1) Enunciado 2 (GN2)
+        Enunciado 3 (GN3) (donde GN significa número de Gödel)
+      </p>
+      <p>
+        Tiene el número de Gödel 2GN1×3GN2×5GN3, que denominaremos GN4. La
+        demostración del teorema de incompletitud de Gödel se basa en la
+        demostración de que, en aritmética formal, algunos conjuntos de
+        enunciados prueban otros enunciados de forma lógica. Por ejemplo, se
+        puede probar que la unión de GN1, GN2 y GN3 (es decir GN4) prueban GN5.
+        Como esta es una relación demostrable entre dos números, se le asigna su
+        propio símbolo, por ejemplo R. Entonces se puede escribir R (v, x) para
+        expresar que x demuestra v. En el caso anterior donde x y v son los
+        números de Gödel GN4 y GN5, se podría escribir R(GN5, GN4).
+      </p>
+
+      <br />
+      <p><b>Paradigma</b></p>
+      <p>
+        Es un lenguaje de programación declarativo, de propósito general que
+        adhiere al paradigma de la programación lógica. Es un lenguaje
+        fuertemente tipado, con un sistema de tipos basado en many-sorted logic
+        con polimorfismo parametrizado. Se le dio ese nombre en honor al lógico
+        Kurt Gödel.
+      </p>
+
+      <br />
+      <p><b>Ejemplo de código</b></p>
+      <img src="./imagenes/gödel_code.png" alt="gödel_code_example" />
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>

@@ -352,4 +352,30 @@ ul > li {
   margin: 20px;
   justify-content: center;
 }
+
+.tableHomework10,
+.tableHomework11 {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  margin: 20px;
+  justify-content: center;
+}
+
+.tableHomework10 b,
+.tableHomework11 b {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableHomework10 *,
+.tableHomework11 * {
+  padding: 2px;
+  border: 1px solid black;
+}
+
+.tableHomework11 {
+  grid-template-columns: repeat(3, 300px);
+}
 /*# sourceMappingURL=homeworks.css.map */

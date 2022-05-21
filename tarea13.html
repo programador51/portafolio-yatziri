@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 13</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 13 - PHP</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p>
+        Este lenguaje de programación se utilizaba principalmente para crear la
+        interfaz HTML y el servidor de una página web o aplicación web.
+      </p>
+      <p>
+        Actualmente se sigue utilizando pero ahora esta más enfocado en crear
+        exclusivamente el servidor de las aplicaciones. La interfaz se ha
+        delegado a tecnologias Front-end.
+      </p>
+      <br />
+
+      <p><b>Etiquetas PHP</b></p>
+      <p>
+        Cuando PHP analiza un archivo busca etiquetas de apertura y cierre, que
+        normalmente son
+        <?php** y ?>, e indican a PHP cuando empezar y terminar de interpretar
+        código. PHP también permite la etiqueta de apertura `<?, pero se desaconseja.
+      </p>
+        <br />
+      </p>
+
+      <p>Otra forma de incluir código es con el elemento script: .</p>
+      <br />
+      <p>
+        Si un archivo es enteramente en PHP, es preferible omitir la etiqueta de
+        cierre al final del archivo ?>.
+      </p>
+
+      <br />
+      <p><b>Escape de HTML</b></p>
+      <p>
+        Cualquier código fuera de las etiquetas de apertura y cierre es ignorado
+        por el intérprete de PHP. Esto permite embeber PHP en HTML:
+      </p>
+      <pre>
+          <code class="language-php">
+&lt;p&gt; Texto ignorado por PHP.&lt;p&gt;
+&lt;?php echo 'Texto que va a ser interpretado por PHP.' &gt;
+&lt;p&gt;Texto también ignorado.&lt;p&gt;
+          </code>
+      </pre>
+
+      <br />
+      <p>
+        Cuando se hace escape en medio de una condición, el intérprete tendrá en
+        cuenta el código HTML sólo si ésta se cumple, de lo contrario saltará el
+        contenido:
+      </p>
+
+      <pre>
+          <code class="language-php">
+&lt;?php if ($expression == true): ?>
+Se mostrará si $expression es true.
+&lt;?php else: ?>
+Sino, se mostrará este contenido.
+&lt;?php endif; ?>          
+          </code>
+      </pre>
+      <p>
+        Para imprimir textos largos este método es más eficiente que enviar el
+        texto a través de echo o print.
+      </p>
+
+      <br />
+      <p><b>Instrucciones de separacion</b></p>
+      <p>
+        Como en C o en Perl, PHP requiere que cada instrucción se termine con
+        punto y coma ";" al final de cada sentencia. La etiqueta de cierre de un
+        bloque de código PHP automáticamente implica el punto y coma, por lo que
+        no es necesario incluirlo al final:
+      </p>
+      <pre>
+          <code class="language-php">
+            &lt;?php echo 'Esto es una prueba' ?>
+          </code>
+      </pre>
+      <p>
+        A veces es recomendable este método para evitar espacios en blanco al
+        final, especialmente cuando se usan include, require o output buffering.
+      </p>
+      <br />
+      <p><b>Comentarios</b></p>
+      <p>El estilo de comentarios en PHP es como el de C, C++ o Perl:</p>
+
+      <pre>
+          <code class="language-php">
+&lt;?php echo 'Hola' ; // Esto es un comentario de una línea
+/* Esto es
+un comentario
+en varias líneas */
+echo 'Más código'; # Esto es otro comentario de una línea
+?>            
+          </code>
+      </pre>
+
+      <p>Los comentarios de varias líneas finalizan con el primer */:</p>
+      <pre>
+          <code class="language-php">
+/*
+echo 'Esto es un comentario'; /* Más comentario */
+                      </code>
+      </pre>
+      <br />
+
+      <p><b>Paradigma</b></p>
+      <p>
+        PHP es un lenguaje de programación cuya sintaxis es heredera de C, pero
+        a diferencia de este último, PHP es un lenguaje de tipado dinámico,
+        multiparadigma e interpretado.Se ha dotado a PHP con un soporte amplio
+        de paradigmas de programación.
+      </p>
+
+      <br />
+      <p>
+        <b
+          >Descargar PHP
+          <a href="https://www.php.net/downloads" target="_blank">aquí</a></b
+        >
+      </p>
+      <br />
+
+      <p><b>Ejemplo de código PHP</b></p>
+      <img src="./imagenes/php.gif" alt="php_code_example" />
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
