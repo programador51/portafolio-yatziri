@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 15</title>
+    <link rel="stylesheet" href="css/homeworks.css" />
+    <link rel="stylesheet" href="css/java.css" />
+  </head>
+  <body>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <article class="glassContainer">
+      <header>
+        <h1>Tarea 15 - Ruby</h1>
+
+        <nav>
+          <a class="navigate" href="index.html">Inicio</a>
+          <div class="dropdown">
+            <button class="dropbtn">Personales</button>
+            <div class="dropdown-content">
+              <a href="biografia.html">Biografía</a>
+              <a href="pasatiempo.html">Pasatiempos</a>
+              <a href="personaje.html">Empresario</a>
+            </div>
+          </div>
+          <a class="navigate" href="#" id="prev-homework">👈🏼</a>
+          <div class="dropdown">
+            <button class="dropbtn">Menú tareas</button>
+            <div class="dropdown-content" id="homeworkOptions"></div>
+          </div>
+          <a class="navigate" href="#" id="next-homework">👉🏼</a>
+        </nav>
+      </header>
+
+      <p><b>Tipos de datos comunes a cualquier idioma</b></p>
+      <ol>
+        <li>Cadena "abc"</li>
+        <li>Número 123123</li>
+        <li>Matriz. Matriz [1,2,3]</li>
+        <li>Hash #Objeto similar a js, clave: valor</li>
+      </ol>
+
+      <pre>
+          <code class="language-ruby">
+"name": "dashi",
+"birth": "1982-9-16"        
+          </code>
+      </pre>
+      <br />
+      <p><b>Método</b></p>
+      <p>
+        Puede definir un método que acepte parámetros de la siguiente manera:
+      </p>
+
+      <pre>
+          <code class="language-ruby">
+def method_name (var1, var2)
+    expr..
+end         
+          </code>
+      </pre>
+      <br />
+      <p>
+        Puede establecer un valor predeterminado para el parámetro y usar el
+        valor predeterminado si el parámetro requerido no se pasa cuando se
+        llama al método:
+      </p>
+      <pre>
+          <code class="language-ruby">
+def method_name (var1=value1, var2=value2)
+    expr..
+end            
+          </code>
+      </pre>
+
+      <br />
+      <p>
+        Cuando desee llamar a un método, solo necesita usar el nombre del
+        método, como se muestra a continuación:
+      </p>
+      <pre>
+          <code class="language-ruby">
+            method_name 25, 30
+          </code>
+      </pre>
+
+      <p>
+        La mayor desventaja de usar métodos de parámetros es que necesita
+        recordar la cantidad de parámetros al llamar al método. Por ejemplo, si
+        pasa solo dos parámetros a un método que acepta tres parámetros, Ruby
+        mostrará un error.
+      </p>
+
+      <pre>
+          <code class="language-ruby">
+def test(a1="Ruby", a2="Perl")
+        pone "El lenguaje de programación es # {a1}"
+        pone "El lenguaje de programación es # {a2}"
+end
+    prueba "C", "C ++" # El lenguaje de programación es C, el lenguaje de programación es C ++,
+    prueba # El lenguaje de programación es Ruby, el lenguaje de programación es 
+            
+          </code>
+      </pre>
+      <p>
+        Cada método en Ruby devuelve un valor por defecto. El valor devuelto es
+        el valor de la última declaración.
+      </p>
+
+      <br />
+      <p><b>Bloques y funciones</b></p>
+
+      <p>
+        Cuando el método se define fuera de la clase, el método se marca como
+        privado de forma predeterminada. Por otro lado, si el método está
+        definido en la clase, se marca como público por defecto.
+      </p>
+      <br />
+      <p>
+        El público o el privado del módulo pueden cambiar la visibilidad
+        predeterminada y la marca privada del método.
+      </p>
+      <br />
+      <p>
+        Cuando desee acceder a los métodos de una clase, primero debe crear una
+        instancia de la clase. Luego, usando el objeto, puede acceder a
+        cualquier miembro de la clase.
+      </p>
+
+      <br />
+      <p><b> Definir una función y llamar</b></p>
+
+      <pre>
+          <code class="language-ruby">
+def test
+    puts "hello ruby"
+end
+test # => hello ruby            
+          </code>
+      </pre>
+      <br />
+      <p><b>Paradigma</b></p>
+      <p>
+        Ruby utiliza muy bien el paradigma de POO, así que estas variables son
+        privadas y no pueden verse desde fuera de la clase. Podemos decir que
+        toda la comunicación que hay entre objetos se hace con los métodos.
+        Además de los objetos, en Ruby encontramos módulos.
+      </p>
+
+      <br />
+      <p>
+        <b
+          >Descargar Ruby
+          <a href="https://www.ruby-lang.org/en/downloads/" target="_blank"
+            >aquí</a
+          ></b
+        >
+      </p>
+
+      <img src="./imagenes/ruby_code.jpg" alt="ruby_code_example" />
+    </article>
+
+    <script src="./java.js"></script>
+    <script src="./menu.js"></script>
+  </body>
+</html>
