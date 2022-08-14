@@ -144,6 +144,12 @@
   animation-delay: 30s;
 }
 
+.anonymous {
+  width: 40px;
+  height: 10px;
+  background-color: black;
+}
+
 .background li:nth-child(9) {
   left: 2%;
   width: 122px;

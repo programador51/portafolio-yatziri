@@ -13,6 +13,13 @@
   --bgColor: #145169;
 }
 
+.anonymous {
+  min-width: 40px;
+  min-height: 10px;
+  background-color: black;
+  display: inline-block;
+}
+
 .navigate,
 .dropbtn {
   text-decoration: none;
